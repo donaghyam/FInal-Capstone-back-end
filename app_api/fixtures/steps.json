@@ -1,0 +1,47 @@
+
+[
+    {
+        "model": "app_api.steps",
+        "pk": 1,
+        "fields": {
+            "description": "Rest",
+            "recipe": 1,
+            "temperature": 153,
+            "time": 60,
+            "amount": 5
+        }
+    },
+    {
+        "model": "app_api.steps",
+        "pk": 2,
+        "fields": {
+            "description": "Mash-out Rest",
+            "recipe": 1,
+            "temperature": 168,
+            "time": 10,
+            "amount": null
+        }
+    },
+    {
+        "model": "app_api.steps",
+        "pk": 3,
+        "fields": {
+            "description": "Sparge",
+            "recipe": 1,
+            "temperature": 170,
+            "time": 10,
+            "amount": 5
+        }
+    },
+    {
+        "model": "app_api.steps",
+        "pk": 4,
+        "fields": {
+            "description": "Rest",
+            "recipe": 3,
+            "temperature": 155,
+            "time": 60,
+            "amount": 5.5
+        }
+    }
+]

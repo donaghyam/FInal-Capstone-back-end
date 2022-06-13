@@ -1,0 +1,156 @@
+[
+    {
+        "model": "app_api.styles",
+        "pk": 1,
+        "fields": {
+            "label": "American Pale Ale"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 2,
+        "fields": {
+            "label": "India Pale Ale"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 3,
+        "fields": {
+            "label": "Amber Ale"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 4,
+        "fields": {
+            "label": "Brown Ale"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 5,
+        "fields": {
+            "label": "Wheat Ale"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 6,
+        "fields": {
+            "label": "Porter"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 7,
+        "fields": {
+            "label": "Altbier"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 8,
+        "fields": {
+            "label": "Dunkelweizen"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 9,
+        "fields": {
+            "label": "Dubbel"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 10,
+        "fields": {
+            "label": "Hefeweizen"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 11,
+        "fields": {
+            "label": "Saison"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 12,
+        "fields": {
+            "label": "Irish Stout"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 13,
+        "fields": {
+            "label": "Pilsner"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 14,
+        "fields": {
+            "label": "Vienna Lager"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 15,
+        "fields": {
+            "label": "Sour"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 16,
+        "fields": {
+            "label": "English Pale Ale"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 17,
+        "fields": {
+            "label": "Tripel"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 18,
+        "fields": {
+            "label": "Barleywine"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 19,
+        "fields": {
+            "label": "Gose"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 20,
+        "fields": {
+            "label": "Irish Red"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 21,
+        "fields": {
+            "label": "Wiezenbock"
+        }
+    },
+    {
+        "model": "app_api.styles",
+        "pk": 22,
+        "fields": {
+            "label": "Dunkelweizen"
+        }
+    }
+]

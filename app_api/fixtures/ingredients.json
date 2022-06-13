@@ -1,0 +1,642 @@
+
+[
+    {
+        "model": "app_api.ingredients",
+        "pk": 1,
+        "fields": {
+            "type": "Hops",
+            "name": "Magnum",
+            "alpha_acids": 13
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 2,
+        "fields": {
+            "type": "Hops",
+            "name": "Perle",
+            "alpha_acids": 7
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 3,
+        "fields": {
+            "type": "Hops",
+            "name": "Cascade",
+            "alpha_acids": 6
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 4,
+        "fields": {
+            "type": "Hops",
+            "name": "Citra",
+            "alpha_acids": 13
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 5,
+        "fields": {
+            "type": "Hops",
+            "name": "East Kent Golding",
+            "alpha_acids": 5
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 6,
+        "fields": {
+            "type": "Hops",
+            "name": "Saaz",
+            "alpha_acids": 4
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 7,
+        "fields": {
+            "type": "Hops",
+            "name": "Centennial",
+            "alpha_acids": 9
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 8,
+        "fields": {
+            "type": "Hops",
+            "name": "Hallertau Mittelfruh",
+            "alpha_acids": 4
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 9,
+        "fields": {
+            "type": "Hops",
+            "name": "Mosaic",
+            "alpha_acids": 12
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 10,
+        "fields": {
+            "type": "Hops",
+            "name": "Amarillo",
+            "alpha_acids": 6
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 11,
+        "fields": {
+            "type": "Hops",
+            "name": "Simcoe",
+            "alpha_acids": 13
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 12,
+        "fields": {
+            "type": "Hops",
+            "name": "Galaxy",
+            "alpha_acids": 17
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 13,
+        "fields": {
+            "type": "Malt",
+            "name": "Biscuit",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 14,
+        "fields": {
+            "type": "Malt",
+            "name": "Vienna",
+            "alpha_acids": null 
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 15,
+        "fields": {
+            "type": "Malt",
+            "name": "Chocolate Malt",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 16,
+        "fields": {
+            "type": "Malt",
+            "name": "Pilsen",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 17,
+        "fields": {
+            "type": "Malt",
+            "name": "Pale Malt",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 18,
+        "fields": {
+            "type": "Malt",
+            "name": "Pilsner",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 19,
+        "fields": {
+            "type": "Malt",
+            "name": "Munich",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 20,
+        "fields": {
+            "type": "Malt",
+            "name": "Maris Otter",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 21,
+        "fields": {
+            "type": "Malt",
+            "name": "Golden Promise",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 22,
+        "fields": {
+            "type": "Malt",
+            "name": "2 Row",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 23,
+        "fields": {
+            "type": "Malt",
+            "name": "Crystal 55L",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 24,
+        "fields": {
+            "type": "Malt",
+            "name": "Crystal 135L",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 25,
+        "fields": {
+            "type": "Malt",
+            "name": "Brown Malt",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 26,
+        "fields": {
+            "type": "Malt",
+            "name": "Black Patent",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 27,
+        "fields": {
+            "type": "Malt",
+            "name": "Roasted Malt",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 28,
+        "fields": {
+            "type": "Malt",
+            "name": "Oats",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 29,
+        "fields": {
+            "type": "Malt",
+            "name": "Amber Malt",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 30,
+        "fields": {
+            "type": "Malt",
+            "name": "Victory",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 31,
+        "fields": {
+            "type": "Malt",
+            "name": "Carapils",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 32,
+        "fields": {
+            "type": "Malt",
+            "name": "White Wheat",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 33,
+        "fields": {
+            "type": "Yeast",
+            "name": "A07 Flagship",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 34,
+        "fields": {
+            "type": "Yeast",
+            "name": "A10 Darkness",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 35,
+        "fields": {
+            "type": "Yeast",
+            "name": "American Ale 1056",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 36,
+        "fields": {
+            "type": "Yeast",
+            "name": "American Ale BRY 96",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 37,
+        "fields": {
+            "type": "Yeast",
+            "name": "American Ale II 1272",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 38,
+        "fields": {
+            "type": "Yeast",
+            "name": "American Ale Yeast Blend WLP060",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 39,
+        "fields": {
+            "type": "Yeast",
+            "name": "American Wheat 1010",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 40,
+        "fields": {
+            "type": "Yeast",
+            "name": "German Ale/Kölsch WLP029",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 41,
+        "fields": {
+            "type": "Yeast",
+            "name": "Brewferm Top",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 42,
+        "fields": {
+            "type": "Yeast",
+            "name": "California Ale V WLP051",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 43,
+        "fields": {
+            "type": "Yeast",
+            "name": "California Ale WLP001",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 44,
+        "fields": {
+            "type": "Yeast",
+            "name": "Charlie’s Fist Bump WLP1983",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 45,
+        "fields": {
+            "type": "Yeast",
+            "name": "Coopers Pure Brewers’ Yeast",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 46,
+        "fields": {
+            "type": "Yeast",
+            "name": "Cream Ale WLP080",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 47,
+        "fields": {
+            "type": "Yeast",
+            "name": "Cream Ale WLP80",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 48,
+        "fields": {
+            "type": "Yeast",
+            "name": "Denny’s Favorite 50 1450",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 49,
+        "fields": {
+            "type": "Yeast",
+            "name": "East Coast Ale WLP008",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 50,
+        "fields": {
+            "type": "Yeast",
+            "name": "East Midlands Ale WLP039",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 51,
+        "fields": {
+            "type": "Yeast",
+            "name": "GY021: Kolsch Bier",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 52,
+        "fields": {
+            "type": "Yeast",
+            "name": "GY030: American Lager",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 53,
+        "fields": {
+            "type": "Yeast",
+            "name": "GY054: Vermont IPA",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 54,
+        "fields": {
+            "type": "Yeast",
+            "name": "LalBrew BRY-97",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 55,
+        "fields": {
+            "type": "Yeast",
+            "name": "M15 Empire Ale",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 56,
+        "fields": {
+            "type": "Yeast",
+            "name": "M44 US West Coast",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 57,
+        "fields": {
+            "type": "Yeast",
+            "name": "Muntons Premium Gold",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 58,
+        "fields": {
+            "type": "Yeast",
+            "name": "Muntons Standard Yeast",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 59,
+        "fields": {
+            "type": "Yeast",
+            "name": "Neutral Grain WLP078",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 60,
+        "fields": {
+            "type": "Yeast",
+            "name": "Northwest Ale 1332",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 61,
+        "fields": {
+            "type": "Yeast",
+            "name": "Old Newark Ale ECY10",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 62,
+        "fields": {
+            "type": "Yeast",
+            "name": "Old Sonoma Ale WLP076",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 63,
+        "fields": {
+            "type": "Yeast",
+            "name": "Pacific Ale WLP041",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 64,
+        "fields": {
+            "type": "Yeast",
+            "name": "Ringwood Ale 1187",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 65,
+        "fields": {
+            "type": "Yeast",
+            "name": "SafAle T-58",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 66,
+        "fields": {
+            "type": "Yeast",
+            "name": "SafAle US-05",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 67,
+        "fields": {
+            "type": "Yeast",
+            "name": "San Diego Super Yeast WLP090",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 68,
+        "fields": {
+            "type": "Yeast",
+            "name": "San Francisco Lager WLP810",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 69,
+        "fields": {
+            "type": "Yeast",
+            "name": "West Coast Ale I (OYL-004)",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 70,
+        "fields": {
+            "type": "Malt",
+            "name": "Carafoam",
+            "alpha_acids": null
+        }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 71,
+        "fields": {
+            "type": "Malt",
+            "name": "Melanoidin",
+            "alpha_acids": null
+        }
+    }
+]

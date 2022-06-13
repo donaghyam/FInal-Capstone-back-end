@@ -1,0 +1,202 @@
+
+[
+    {
+        "model": "app_api.RecipeIngredients",
+        "pk": 1,
+        "fields": {
+            "ingredient": 22,
+            "quantity": 184,
+            "recipe": 1,
+            "use": "Mash",
+            "time": null 
+        }
+    },
+    {
+        "model": "app_api.RecipeIngredients",
+        "pk": 2,
+        "fields": {
+            "ingredient": 23,
+            "quantity": 14.5,
+            "recipe": 1,
+            "use": "Mash",
+            "time": null
+        }
+    },
+    {
+        "model": "app_api.RecipeIngredients",
+        "pk": 3,
+        "fields": {
+            "ingredient": 1,
+            "quantity": 0.5,
+            "recipe": 1,
+            "use": "Boil",
+            "time": 60
+        }
+    },
+    {
+        "model": "app_api.RecipeIngredients",
+        "pk": 4,
+        "fields": {
+            "ingredient": 2,
+            "quantity": 0.5,
+            "recipe": 1,
+            "use": "Boil",
+            "time": 30
+        }
+    },
+    {
+        "model": "app_api.RecipeIngredients",
+        "pk": 5,
+        "fields": {
+            "ingredient": 3,
+            "quantity": 1,
+            "recipe": 1,
+            "use": "Boil",
+            "time": 10
+        }
+    },
+    {
+        "model": "app_api.RecipeIngredients",
+        "pk": 6,
+        "fields": {
+            "ingredient": 3,
+            "quantity": 2,
+            "recipe": 1,
+            "use": "Boil",
+            "time": 0
+        }
+    },
+    {
+        "model": "app_api.RecipeIngredients",
+        "pk": 7,
+        "fields": {
+            "ingredient": 3,
+            "quantity": 2,
+            "recipe": 1,
+            "use": "Dry Hop - Day 4",
+            "time": null
+        }
+    },
+
+    {
+        "model": "app_api.RecipeIngredients",
+        "pk": 8,
+        "fields": {
+            "ingredient": 22,
+            "quantity": 188,
+            "recipe": 3,
+            "use": "Mash",
+            "time": null 
+        }
+    },
+    {
+        "model": "app_api.RecipeIngredients",
+        "pk": 9,
+        "fields": {
+            "ingredient": 19,
+            "quantity": 18,
+            "recipe": 3,
+            "use": "Mash",
+            "time": null
+        }
+    },
+    {
+        "model": "app_api.RecipeIngredients",
+        "pk": 10,
+        "fields": {
+            "ingredient": 70,
+            "quantity": 8,
+            "recipe": 3,
+            "use": "Malt",
+            "time": 60
+        }
+    },
+    {
+        "model": "app_api.RecipeIngredients",
+        "pk": 11,
+        "fields": {
+            "ingredient": 23,
+            "quantity": 8,
+            "recipe": 3,
+            "use": "Malt",
+            "time": 30
+        }
+    },
+    {
+        "model": "app_api.RecipeIngredients",
+        "pk": 12,
+        "fields": {
+            "ingredient": 71,
+            "quantity": 8,
+            "recipe": 3,
+            "use": "Malt",
+            "time": 10
+        }
+    },
+    {
+        "model": "app_api.RecipeIngredients",
+        "pk": 13,
+        "fields": {
+            "ingredient": 4,
+            "quantity": 0.75,
+            "recipe": 3,
+            "use": "Boil",
+            "time": 60
+        }
+    },
+    {
+        "model": "app_api.RecipeIngredients",
+        "pk": 14,
+        "fields": {
+            "ingredient": 4,
+            "quantity": 1.25,
+            "recipe": 3,
+            "use": "Boil",
+            "time": 15
+        }
+    },
+    {
+        "model": "app_api.RecipeIngredients",
+        "pk": 15,
+        "fields": {
+            "ingredient": 4,
+            "quantity": 1.25,
+            "recipe": 3,
+            "use": "Boil",
+            "time": 10
+        }
+    },
+    {
+        "model": "app_api.RecipeIngredients",
+        "pk": 16,
+        "fields": {
+            "ingredient": 4,
+            "quantity": 1.25,
+            "recipe": 3,
+            "use": "Boil",
+            "time": 5
+        }
+    },
+    {
+        "model": "app_api.RecipeIngredients",
+        "pk": 17,
+        "fields": {
+            "ingredient": 4,
+            "quantity": 1.25,
+            "recipe": 3,
+            "use": "Boil",
+            "time": 1
+        }
+    },
+    {
+        "model": "app_api.RecipeIngredients",
+        "pk": 18,
+        "fields": {
+            "ingredient": 4,
+            "quantity": 3,
+            "recipe": 3,
+            "use": "Dry Hop - Day 7",
+            "time": null
+        }
+    }
+]

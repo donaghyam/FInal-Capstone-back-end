@@ -1,0 +1,21 @@
+[
+    {
+        "model": "app_api.recipes",
+        "pk": 1,
+        "fields": {
+            "description": "A delightful interpretation of a classic style. It has a deep amber color and an exceptionally full-bodied, complex character. Generous quantities of premium Cascade hops give the Pale Ale its fragrant bouquet and spicy flavor.",
+            "name": "West Coast Pale Ale",
+            "style": 1,
+            "user": 1,
+            "starting_gravity": 1.055,
+            "final_gravity": 1.013,
+            "abv": 5.6,
+            "ibu": 39,
+            "srm": 8,
+            "mash_ph": 5.7,
+            "batch_volume": 6.5,
+            "pre_boil_volume": 7.75,
+            "boil_time": 70
+        }
+    }
+]

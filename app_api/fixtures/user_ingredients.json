@@ -1,0 +1,48 @@
+
+[
+    {
+        "model": "app_api.UserIngredients",
+        "pk": 1,
+        "fields": {
+            "ingredient": 22,
+            "quantity": 320,
+            "user": 1
+        }
+    },
+    {
+        "model": "app_api.UserIngredients",
+        "pk": 2,
+        "fields": {
+            "ingredient": 23,
+            "quantity": 80,
+            "user": 1
+        }
+    },
+    {
+        "model": "app_api.UserIngredients",
+        "pk": 3,
+        "fields": {
+            "ingredient": 1,
+            "quantity": 3,
+            "user": 1
+        }
+    },
+    {
+        "model": "app_api.UserIngredients",
+        "pk": 4,
+        "fields": {
+            "ingredient": 2,
+            "quantity": 3,
+            "user": 1
+        }
+    },
+    {
+        "model": "app_api.UserIngredients",
+        "pk": 5,
+        "fields": {
+            "ingredient": 3,
+            "quantity": 7,
+            "user": 1
+        }
+    }
+]
