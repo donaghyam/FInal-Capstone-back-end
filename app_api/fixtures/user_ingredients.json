@@ -44,5 +44,14 @@
             "quantity": 7,
             "user": 1
         }
+    },
+    {
+        "model": "app_api.UserIngredients",
+        "pk": 6,
+        "fields": {
+            "ingredient": 66,
+            "quantity": 2,
+            "user": 1
+        }
     }
 ]

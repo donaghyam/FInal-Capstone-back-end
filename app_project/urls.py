@@ -20,12 +20,14 @@ from django.urls import path
 from app_api.views import register_user, login_user
 from app_api.views import RecipeView
 from app_api.views.recipe_ingredients_view import RecipeIngredientsView
+from app_api.views.steps_view import StepsView
 from app_api.views.user_ingredients_view import UserIngredientsView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'recipes', RecipeView, 'recipe')
 router.register(r'recipe_ingredients', RecipeIngredientsView, 'recipe_ingredient')
 router.register(r'user_ingredients', UserIngredientsView, 'user_ingredient')
+router.register(r'steps', StepsView, 'step')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

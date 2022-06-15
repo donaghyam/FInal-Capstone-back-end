@@ -638,5 +638,14 @@
             "name": "Melanoidin",
             "alpha_acids": null
         }
+    },
+    {
+        "model": "app_api.ingredients",
+        "pk": 72,
+        "fields": {
+            "type": "Yeast",
+            "name": "SafAle S-04",
+            "alpha_acids": null
+        }
     }
 ]

@@ -163,7 +163,7 @@ class RecipeSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Recipes
-        fields = ('description', 'name', 'style', 'user', 'starting_gravity', 'final_gravity', 'abv', 'ibu', 'srm', 'mash_ph', 'batch_volume', 'pre_boil_volume', 'boil_time', 'user')
+        fields = ('id', 'description', 'name', 'style', 'user', 'starting_gravity', 'final_gravity', 'abv', 'ibu', 'srm', 'mash_ph', 'batch_volume', 'pre_boil_volume', 'boil_time', 'user')
         depth = 3
         
 class CreateRecipeSerializer(serializers.ModelSerializer):

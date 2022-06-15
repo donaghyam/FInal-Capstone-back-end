@@ -73,7 +73,7 @@ class UserIngredientsSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = UserIngredients
-        fields = ('ingredient', 'quantity', 'user')
+        fields = ('id', 'ingredient', 'quantity', 'user')
         depth = 3
         
 class CreateUserIngredientsSerializer(serializers.ModelSerializer):

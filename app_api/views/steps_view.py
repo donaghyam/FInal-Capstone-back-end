@@ -2,14 +2,14 @@
 
 from argparse import Action
 from django.http import HttpResponseServerError
-from app_api.models import RecipeIngredients, Recipes
+from app_api.models import RecipeIngredients, Recipes, Steps
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 
 
 
-class RecipeIngredientsView(ViewSet):
+class StepsView(ViewSet):
     """recipe views"""
     
     def retrieve(self, request, pk):
@@ -19,10 +19,10 @@ class RecipeIngredientsView(ViewSet):
             Response -- JSON serialized recipe ingredient
         """
         try:
-            recipe_ingredients = RecipeIngredients.objects.get(pk=pk)
-            serializer = RecipeIngredientsSerializer(recipe_ingredients)
+            steps = Steps.objects.get(pk=pk)
+            serializer = StepsSerializer(steps)
             return Response(serializer.data)
-        except RecipeIngredients.DoesNotExist as ex:
+        except Steps.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
     
@@ -32,15 +32,15 @@ class RecipeIngredientsView(ViewSet):
         Returns:
             Response -- JSON serialized list of recipe ingredients
         """
-        recipe_ingredients = RecipeIngredients.objects.all()
+        steps = Steps.objects.all()
         
         #query by recipe
         recipe = request.query_params.get('recipe', None)
         
         if recipe is not None:
-            recipe_ingredients = recipe_ingredients.filter(recipe__id=recipe)
+            steps = steps.filter(recipe__id=recipe)
     
-        serializer = RecipeIngredientsSerializer(recipe_ingredients, many=True)
+        serializer = StepsSerializer(steps, many=True)
 
         return Response(serializer.data)
 
@@ -51,7 +51,7 @@ class RecipeIngredientsView(ViewSet):
             Response -- JSON serialized recipe instance
         """
         user = request.auth.user
-        serializer = CreateRecipeIngredientsSerializer(data=request.data)
+        serializer = CreateStepsSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save(user=user)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -62,28 +62,28 @@ class RecipeIngredientsView(ViewSet):
         Returns:
             Response -- Empty body with 204 status code
         """
-        recipe_ingredients = RecipeIngredients.objects.get(pk=pk)
-        serializer = CreateRecipeIngredientsSerializer(recipe_ingredients, data=request.data)
+        steps = Steps.objects.get(pk=pk)
+        serializer = CreateStepsSerializer(steps, data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
     
     def destroy(self, request, pk):
-        recipe = RecipeIngredients.objects.get(pk=pk)
+        recipe = Steps.objects.get(pk=pk)
         recipe.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
     
     
-class RecipeIngredientsSerializer(serializers.ModelSerializer):
+class StepsSerializer(serializers.ModelSerializer):
     """JSON serializer for recipes
     """
     class Meta:
-        model = RecipeIngredients
-        fields = ('id', 'ingredient', 'quantity', 'recipe', 'use', 'time')
+        model = Steps
+        fields = ('id', 'description', 'recipe', 'temperature', 'amount', 'time')
         depth = 3
         
-class CreateRecipeIngredientsSerializer(serializers.ModelSerializer):
+class CreateStepsSerializer(serializers.ModelSerializer):
     class Meta:
-        model = RecipeIngredients
-        fields = ['ingredient', 'quantity', 'recipe', 'use', 'time']
+        model = Steps
+        fields = ['description', 'recipe', 'temperature', 'amount', 'time']
         
