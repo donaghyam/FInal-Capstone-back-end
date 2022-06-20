@@ -13,10 +13,10 @@ class StepsView(ViewSet):
     """recipe views"""
     
     def retrieve(self, request, pk):
-        """Handle GET requests for single recipe ingredient
+        """Handle GET requests for single recipe step
 
         Returns:
-            Response -- JSON serialized recipe ingredient
+            Response -- JSON serialized recipe step
         """
         try:
             steps = Steps.objects.get(pk=pk)
@@ -27,10 +27,10 @@ class StepsView(ViewSet):
 
     
     def list(self, request):
-        """Handle GET requests to get all recipe ingredients
+        """Handle GET requests to get all recipe steps
 
         Returns:
-            Response -- JSON serialized list of recipe ingredients
+            Response -- JSON serialized list of recipe steps
         """
         steps = Steps.objects.all()
         
@@ -50,10 +50,8 @@ class StepsView(ViewSet):
         Returns:
             Response -- JSON serialized recipe instance
         """
-        user = request.auth.user
         serializer = CreateStepsSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save(user=user)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
     def update(self, request, pk):

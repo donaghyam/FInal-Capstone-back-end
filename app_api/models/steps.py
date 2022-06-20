@@ -7,3 +7,4 @@ class Steps(models.Model):
     temperature = models.IntegerField()
     time = models.IntegerField()
     amount = models.DecimalField(null = True, max_digits=4, decimal_places=1)
+    

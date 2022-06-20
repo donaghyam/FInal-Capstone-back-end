@@ -10,7 +10,8 @@
         "model": "app_api.styles",
         "pk": 2,
         "fields": {
-            "label": "India Pale Ale"
+            "label": "India Pale Ale",
+            "image": "https://thumbs.dreamstime.com/z/glass-stout-beer-vintage-color-vector-engraving-glass-stout-beer-vintage-color-vector-engraving-illustration-isolated-135211558.jpg"
         }
     },
     {

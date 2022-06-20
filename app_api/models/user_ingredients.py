@@ -6,3 +6,6 @@ class UserIngredients(models.Model):
     ingredient = models.ForeignKey("Ingredients", on_delete=models.CASCADE)
     quantity = models.IntegerField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    class Meta:
+        ordering=['quantity']

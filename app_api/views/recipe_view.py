@@ -12,7 +12,6 @@ from app_api.views.helpers import dict_fetch_all
 from django import template
 
 
-
 class RecipeView(ViewSet):
     """recipe views"""
     
@@ -127,6 +126,19 @@ class RecipeView(ViewSet):
             
             serializer = RecipeSerializer(recipes, many=True)
             return Response(serializer.data)
+        
+    @action(methods=['get'], detail=False)
+    def retrieve_most_recent(self, request):
+        
+        #get all recipes            
+        recipes = Recipes.objects.all()        
+        
+        recent_recipe_list = recipes.order_by('-id')
+        
+        recent_recipe = recent_recipe_list[0]
+            
+        serializer = RecipeSerializer(recent_recipe, many=False)
+        return Response(serializer.data)
 
     def create(self, request):
         """Handle POST operations
@@ -163,11 +175,11 @@ class RecipeSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Recipes
-        fields = ('id', 'description', 'name', 'style', 'user', 'starting_gravity', 'final_gravity', 'abv', 'ibu', 'srm', 'mash_ph', 'batch_volume', 'pre_boil_volume', 'boil_time', 'user')
+        fields = ('id', 'description', 'name', 'style', 'starting_gravity', 'final_gravity', 'abv', 'ibu', 'srm', 'mash_ph', 'batch_volume', 'pre_boil_volume', 'boil_time', 'user')
         depth = 3
         
 class CreateRecipeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Recipes
-        fields = ['description', 'name', 'style', 'user', 'starting_gravity', 'final_gravity', 'abv', 'ibu', 'srm', 'mash_ph', 'batch_volume', 'pre_boil_volume', 'boil_time']
+        fields = ['description', 'name', 'style', 'starting_gravity', 'final_gravity', 'abv', 'ibu', 'srm', 'mash_ph', 'batch_volume', 'pre_boil_volume', 'boil_time']
         

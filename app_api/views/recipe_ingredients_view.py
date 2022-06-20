@@ -50,10 +50,8 @@ class RecipeIngredientsView(ViewSet):
         Returns:
             Response -- JSON serialized recipe instance
         """
-        user = request.auth.user
         serializer = CreateRecipeIngredientsSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save(user=user)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
     def update(self, request, pk):

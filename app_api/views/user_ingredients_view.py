@@ -6,6 +6,7 @@ from app_api.models import UserIngredients, user_ingredients
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
+from rest_framework.decorators import action
 
 
 
@@ -32,11 +33,26 @@ class UserIngredientsView(ViewSet):
             Response -- JSON serialized list of user ingredients
         """
         user_ingredients = UserIngredients.objects.all()
+        
+        user = request.auth.user
+        
+        user = request.query_params.get('user', None)
+        
+        if user is not None:
+            user_ingredients = user_ingredients.filter(user=user)
     
         serializer = UserIngredientsSerializer(user_ingredients, many=True)
 
         return Response(serializer.data)
-
+    
+    @action(methods=["get"], detail=False)
+    def current_user_inventory(self, request):
+        user = request.auth.user
+        user_ingredients = UserIngredients.objects.filter(user=user)
+        
+        serializer = UserIngredientsSerializer(user_ingredients, many=True)
+        return Response(serializer.data)
+        
     def create(self, request):
         """Handle POST operations
 
@@ -79,5 +95,5 @@ class UserIngredientsSerializer(serializers.ModelSerializer):
 class CreateUserIngredientsSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserIngredients
-        fields = ['ingredient', 'quantity', 'user']
+        fields = ['ingredient', 'quantity']
         

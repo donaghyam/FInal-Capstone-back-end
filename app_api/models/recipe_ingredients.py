@@ -8,3 +8,6 @@ class RecipeIngredients(models.Model):
     recipe = models.ForeignKey("Recipes", on_delete=models.CASCADE)
     use = models.CharField(max_length=50)
     time = models.IntegerField(null=True)
+    
+    class Meta:
+        ordering=['-time']
