@@ -82,7 +82,6 @@ class UserIngredientsView(ViewSet):
         user_ingredients.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
     
-    
 class UserIngredientsSerializer(serializers.ModelSerializer):
     """JSON serializer for user ingredients
     

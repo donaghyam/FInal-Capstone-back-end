@@ -3,7 +3,8 @@
         "model": "app_api.styles",
         "pk": 1,
         "fields": {
-            "label": "American Pale Ale"
+            "label": "American Pale Ale",
+            "image": "https://cdn.justwineapp.com/assets/beer/bottle/callabonna-american-pale-ale-apa-salt-beer-factory_1655401631.png"
         }
     },
     {
@@ -11,56 +12,63 @@
         "pk": 2,
         "fields": {
             "label": "India Pale Ale",
-            "image": "https://thumbs.dreamstime.com/z/glass-stout-beer-vintage-color-vector-engraving-glass-stout-beer-vintage-color-vector-engraving-illustration-isolated-135211558.jpg"
+            "image": "https://cdn.justwineapp.com/assets/beer/bottle/wakesetter-ipa-american-ipa-shore-line-brewing-co_1654629152.png"        
         }
     },
     {
         "model": "app_api.styles",
         "pk": 3,
         "fields": {
-            "label": "Amber Ale"
+            "label": "Amber Ale",
+            "image": "https://cdn.justwineapp.com/assets/beer/bottle/38-state-brewing-company-coloramber-ale_1475601530.png"
         }
     },
     {
         "model": "app_api.styles",
         "pk": 4,
         "fields": {
-            "label": "Brown Ale"
+            "label": "Brown Ale",
+            "image": "https://cdn.justwineapp.com/assets/beer/bottle/bindian-brown-ale-american-brown-ale-gravity-brewworks_1650652857.png"
         }
     },
     {
         "model": "app_api.styles",
         "pk": 5,
         "fields": {
-            "label": "Wheat Ale"
+            "label": "Wheat Ale",
+            "image": "https://cdn.justwineapp.com/assets/beer/bottle/lucy-tangerine-wit-witbier-common-crown-brewing-co_1654618918.png"
         }
     },
     {
         "model": "app_api.styles",
         "pk": 6,
         "fields": {
-            "label": "Porter"
+            "label": "Porter",
+            "image": "https://cdn.justwineapp.com/assets/beer/bottle/coconut-chocolate-porter-american-porter-back-unturned-brewing-co_1652119875.png"
         }
     },
     {
         "model": "app_api.styles",
         "pk": 7,
         "fields": {
-            "label": "Altbier"
+            "label": "Altbier",
+            "image": "https://www.mrbeer.com/media/catalog/product/cache/bbf8aa774bcb2c8514e64d017298a578/b/e/beer-amber-weizen_1_3.png"
         }
     },
     {
         "model": "app_api.styles",
         "pk": 8,
         "fields": {
-            "label": "Dunkelweizen"
+            "label": "Dunkelweizen",
+            "image": "https://cdn.hopculture.com/wp-content/uploads/2017/01/Weizen-Glass-Image.jpg"
         }
     },
     {
         "model": "app_api.styles",
         "pk": 9,
         "fields": {
-            "label": "Dubbel"
+            "label": "Dubbel",
+            "image": "https://cdn.justwineapp.com/assets/beer/bottle/pole-plant-american-pale-lager-herald-street-brew-works_1639594102.png"
         }
     },
     {
@@ -88,70 +96,80 @@
         "model": "app_api.styles",
         "pk": 13,
         "fields": {
-            "label": "Pilsner"
+            "label": "Pilsner",
+            "image": "https://static.scientificamerican.com/sciam/cache/file/6BCFBDA8-397F-4A3A-828155D2F8B85FEF_source.jpg?w=590&h=800&47528C5C-6DA3-42C8-A9830BC284FEAC9F"
         }
     },
     {
         "model": "app_api.styles",
         "pk": 14,
         "fields": {
-            "label": "Vienna Lager"
+            "label": "Vienna Lager",
+            "image": "https://cdn.justwineapp.com/assets/beer/bottle/edge-brewing-company-odelay-vienna-lager_1466445606.png"
         }
     },
     {
         "model": "app_api.styles",
         "pk": 15,
         "fields": {
-            "label": "Sour"
+            "label": "Sour",
+            "image": "https://cdn.justwineapp.com/assets/beer/bottle/raspberry-sour-american-wild-sour-ale-midtown-brewing-company_1654122751.png"
         }
     },
     {
         "model": "app_api.styles",
         "pk": 16,
         "fields": {
-            "label": "English Pale Ale"
+            "label": "English Pale Ale",
+            "image": "https://cdn.justwineapp.com/assets/beer/bottle/cascade-ipa-english-india-pale-ale-ipa-mighty-oak-brewing-company_1650655989.png"
         }
     },
     {
         "model": "app_api.styles",
         "pk": 17,
         "fields": {
-            "label": "Tripel"
+            "label": "Tripel",
+            "image": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/pint-of-dark-ale-on-a-white-background-lleerogers.jpg"
         }
     },
     {
         "model": "app_api.styles",
         "pk": 18,
         "fields": {
-            "label": "Barleywine"
+            "label": "Barleywine",
+            "image": "https://cdn11.bigcommerce.com/s-iacihapf89/images/stencil/500x659/products/1058/1927/hoodoo-brewing-company-hoodoo-tusk-barleywine-blend_1496867897__90199.1547143699.png?c=2"
         }
     },
     {
         "model": "app_api.styles",
         "pk": 19,
         "fields": {
-            "label": "Gose"
+            "label": "Gose",
+            "image": "https://cdn.justwineapp.com/assets/beer/bottle/brasserie-dieu-du-ciel-tamarindo_1467219251.png"
         }
     },
     {
         "model": "app_api.styles",
         "pk": 20,
         "fields": {
-            "label": "Irish Red"
+            "label": "Irish Red",
+            "image": "https://cdn.justwineapp.com/assets/beer/bottle/bench-creek-brewing-soulless-wonder-cask_1493843974.png"
         }
     },
     {
         "model": "app_api.styles",
         "pk": 21,
         "fields": {
-            "label": "Wiezenbock"
+            "label": "Wiezenbock",
+            "image": "https://cdn.shopify.com/s/files/1/2785/6868/products/download_x700.png?v=1578937415"
         }
     },
     {
         "model": "app_api.styles",
         "pk": 22,
         "fields": {
-            "label": "Dunkelweizen"
+            "label": "Dunkelweizen",
+            "image": "https://media.istockphoto.com/photos/glass-of-beer-on-white-background-picture-id847438598?k=20&m=847438598&s=170667a&w=0&h=dMSGrnfRU2-WS36mZjypggqBm-niQbS1Volg5HPlkyM="
         }
     }
 ]
