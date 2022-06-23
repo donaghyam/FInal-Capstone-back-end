@@ -17,5 +17,24 @@
             "pre_boil_volume": 7.75,
             "boil_time": 70
         }
+    },
+    {
+        "model": "app_api.recipes",
+        "pk": 3,
+        "fields": {
+            "description": "This intensely hopped and gushing undead Pale Ale will be one’s only respite after the zombie apocalypse.",
+            "name": "Zombie Dust clone",
+            "style": 2,
+            "user": 1,
+            "starting_gravity": 1.061,
+            "final_gravity": 1.016,
+            "abv": 5.9,
+            "ibu": 62,
+            "srm": 8,
+            "mash_ph": 5.8,
+            "batch_volume": 6.0,
+            "pre_boil_volume": 7,
+            "boil_time": 60
+        }
     }
 ]

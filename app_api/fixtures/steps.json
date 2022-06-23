@@ -32,16 +32,5 @@
             "time": 10,
             "amount": 5
         }
-    },
-    {
-        "model": "app_api.steps",
-        "pk": 4,
-        "fields": {
-            "description": "Rest",
-            "recipe": 3,
-            "temperature": 155,
-            "time": 60,
-            "amount": 5.5
-        }
     }
 ]
