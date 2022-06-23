@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 class Recipes(models.Model):
     
-    description = models.CharField(max_length=200)
+    description = models.CharField(max_length=1000)
     name = models.CharField(max_length=50)
     style = models.ForeignKey("Styles", on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
