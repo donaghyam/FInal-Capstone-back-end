@@ -56,7 +56,7 @@ FROM (
         ON r.id = ri.recipe_id
     JOIN app_api_ingredients i 
         ON i.id = ri.ingredient_id
-    -- WHERE r.id = 2
+    WHERE r.id = 1
     GROUP BY ri.ingredient_id
 ) as r
 LEFT JOIN (

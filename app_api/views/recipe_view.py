@@ -41,7 +41,7 @@ class RecipeView(ViewSet):
     
     #Write custom method to display a list of recipes where the current user's ingredients 
     #quantity exceed the amount required in the recipe
-    def find_duplicate_ingredients(self, request):
+    def find_duplicate_ingredients(self, request, recipe_id):
         with connection.cursor() as db_cursor:
             
             user = request.auth.user
@@ -59,6 +59,7 @@ class RecipeView(ViewSet):
                         ON r.id = ri.recipe_id
                     JOIN app_api_ingredients i 
                         ON i.id = ri.ingredient_id
+                    WHERE r.id = %s
                     GROUP BY ri.ingredient_id
                 ) as r
                 LEFT JOIN (
@@ -74,7 +75,7 @@ class RecipeView(ViewSet):
                     WHERE u.id = %s
                 ) as u 
                 ON r.ingredient_id = u.ingredient_id
-            """, (user.id, ))
+            """, (recipe_id, user.id,))
             
             # Pass the db_cursor to the dict_fetch_all function to turn the fetch_all() response into a dictionary
             dataset = dict_fetch_all(db_cursor)
@@ -107,28 +108,36 @@ class RecipeView(ViewSet):
             return recipes
             
     @action(methods=['get'], detail=False)
-    def compare_ingredients(self, request):        
+    def compare_ingredients(self, request):      
         
-        #get list of compiled ingredients
-        recipes_with_ingredients = self.find_duplicate_ingredients(request)
+        recipes = Recipes.objects.all() 
+        
+        recipes_with_ingredients = []
+        
+        for recipe in recipes:
+            
+            #get list of compiled ingredients
+            recipes_with_ingredients.append(self.find_duplicate_ingredients(request, recipe.id))
         
         available_recipes = []
         
         for recipe in recipes_with_ingredients:
             add_recipe = True
             
-            for ingredient in recipe['ingredient']:
+            for ingredient in recipe[0]['ingredient']:
                 if ingredient['user_quantity'] is None or ingredient['user_quantity'] < ingredient['recipe_quantity']:
                     add_recipe = False
                     break
-                    
+            if add_recipe is False:
+                continue
+            
             if add_recipe is True:
                 available_recipes.append(recipe)
                 
         recipes_to_list = []
                 
         for recipe in available_recipes:
-            recipe = Recipes.objects.get(pk=recipe['recipe_id'])
+            recipe = Recipes.objects.get(pk=recipe[0]['recipe_id'])
             recipes_to_list.append(recipe)
             
         serializer = RecipeSerializer(recipes_to_list, many=True)
