@@ -1,15 +1,13 @@
 """View module for handling recipe requests """
 
-from argparse import Action
 from django.http import HttpResponseServerError
-from app_api.models import Recipes, RecipeIngredients, UserIngredients
+from app_api.models import Recipes
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from rest_framework.decorators import action
 from django.db import connection
 from app_api.views.helpers import dict_fetch_all
-from django import template
 
 
 class RecipeView(ViewSet):
@@ -43,89 +41,98 @@ class RecipeView(ViewSet):
     
     #Write custom method to display a list of recipes where the current user's ingredients 
     #quantity exceed the amount required in the recipe
-    def find_duplicate_ingredients(self):
+    def find_duplicate_ingredients(self, request):
         with connection.cursor() as db_cursor:
+            
+            user = request.auth.user
 
             db_cursor.execute("""
-                SELECT 
-                    id,
-                    use,
-                    time,
-                    ingredient_id,
-                    recipe_id,
-                    SUM(quantity) as quantity,
-                    COUNT(*) as count
-                FROM app_api_recipeingredients
-                GROUP BY ingredient_id
-                HAVING COUNT(*) > 0
-            """)
+                SELECT *
+                FROM (
+                    SELECT
+                        r.*,
+                        ri.ingredient_id,
+                        i.name recipe_ingredient_name,
+                        SUM(ri.quantity) as recipe_quantity
+                    FROM app_api_recipes r
+                    JOIN app_api_recipeingredients ri
+                        ON r.id = ri.recipe_id
+                    JOIN app_api_ingredients i 
+                        ON i.id = ri.ingredient_id
+                    GROUP BY ri.ingredient_id
+                ) as r
+                LEFT JOIN (
+                    SELECT
+                        ui.ingredient_id,
+                        i.name user_ingredient_name,
+                        ui.quantity user_quantity
+                    FROM auth_user u 
+                    JOIN app_api_useringredients ui
+                        ON u.id = ui.user_id
+                    JOIN app_api_ingredients i 
+                        ON i.id = ui.ingredient_id
+                    WHERE u.id = %s
+                ) as u 
+                ON r.ingredient_id = u.ingredient_id
+            """, (user.id, ))
+            
             # Pass the db_cursor to the dict_fetch_all function to turn the fetch_all() response into a dictionary
             dataset = dict_fetch_all(db_cursor)
             
-            compiled_ingredients = []
+            recipes = []
 
             for row in dataset:
-                ingredient_list = {
-                    "id": row['id'],
-                    "use": row['use'],
-                    "time": row['time'],
+                ingredient = {
+                    "user_ingredient_name": row['user_ingredient_name'],
+                    "recipe_ingredient_name": row['recipe_ingredient_name'],
                     "ingredient_id": row['ingredient_id'],
-                    "recipe_id": row['recipe_id'],
-                    "quantity": row['quantity'],
-                    "count": row['count'],
+                    "recipe_quantity": row['recipe_quantity'],
+                    "user_quantity": row['user_quantity'],
                 }
                 
-                compiled_ingredients.append(ingredient_list)
+                recipe_dict = None 
+                for recipe_ingredient in recipes:
+                    if recipe_ingredient['recipe_id'] == row['id']:
+                        recipe_dict = recipe_ingredient
+                        
+                if recipe_dict:
+                    recipe_dict['ingredient'].append(ingredient)
                 
-            return compiled_ingredients
+                else:
+                    recipes.append({
+                        "recipe_id": row['id'],
+                        "ingredient": [ingredient]
+                    })
+            
+            return recipes
             
     @action(methods=['get'], detail=False)
     def compare_ingredients(self, request):        
+        
+        #get list of compiled ingredients
+        recipes_with_ingredients = self.find_duplicate_ingredients(request)
+        
+        available_recipes = []
+        
+        for recipe in recipes_with_ingredients:
+            add_recipe = True
             
-            #get all recipes            
-            recipes = Recipes.objects.all()
-            
-            #get all user_ingredients            
-            user_ingredients = UserIngredients.objects.all()
-            
-            #get list of compiled ingredients
-            compiled_ingredients = self.find_duplicate_ingredients()
-            
-            available_recipes = []
-            
-            for recipe in recipes:
-                
-                for ingredient in compiled_ingredients:
-                
-                    #if id on recipe matches recipe_id on compiled_ingredients list
-                    if recipe.id == ingredient['recipe_id']:
+            for ingredient in recipe['ingredient']:
+                if ingredient['user_quantity'] is None or ingredient['user_quantity'] < ingredient['recipe_quantity']:
+                    add_recipe = False
+                    break
                     
-                        #iterate through user_ingredients
-                        for u_ingredient in user_ingredients:
-                            
-                            passed = True
-                            
-                            found_ingredient = False
-                        
-                            #if user_ingredient ingredient_id matches compiled_ingredient ingredient_id
-                            if u_ingredient.ingredient_id == ingredient['ingredient_id']:
-                                
-                                found_ingredient = True
-                            
-                                #if quantity of user_ingredient <= quantity on compiled_ingredient
-                                if u_ingredient.quantity <= ingredient['quantity']:
-                                
-                                    passed = False
-                                
-                            if passed == True and found_ingredient == True:
-                                
-                                available_recipes.append(recipe)
+            if add_recipe is True:
+                available_recipes.append(recipe)
+                
+        recipes_to_list = []
+                
+        for recipe in available_recipes:
+            recipe = Recipes.objects.get(pk=recipe['recipe_id'])
+            recipes_to_list.append(recipe)
             
-            #convert to dictionary to remove duplicates
-            recipes = list(dict.fromkeys(available_recipes))
-            
-            serializer = RecipeSerializer(recipes, many=True)
-            return Response(serializer.data)
+        serializer = RecipeSerializer(recipes_to_list, many=True)
+        return Response(serializer.data)
         
     @action(methods=['get'], detail=False)
     def retrieve_most_recent(self, request):

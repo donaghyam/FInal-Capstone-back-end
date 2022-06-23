@@ -24,6 +24,7 @@ from app_api.views.recipe_ingredients_view import RecipeIngredientsView
 from app_api.views.steps_view import StepsView
 from app_api.views.styles_view import StylesView
 from app_api.views.user_ingredients_view import UserIngredientsView
+from app_api.views.user_view import UsersView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'recipes', RecipeView, 'recipe')
@@ -32,6 +33,7 @@ router.register(r'user_ingredients', UserIngredientsView, 'user_ingredient')
 router.register(r'steps', StepsView, 'step')
 router.register(r'ingredients', IngredientsView, 'ingredient')
 router.register(r'styles', StylesView, 'style')
+router.register(r'users', UsersView, 'user')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
