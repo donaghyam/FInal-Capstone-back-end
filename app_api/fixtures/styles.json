@@ -75,21 +75,24 @@
         "model": "app_api.styles",
         "pk": 10,
         "fields": {
-            "label": "Hefeweizen"
+            "label": "Hefeweizen",
+            "image": "https://thumbs.dreamstime.com/b/glass-light-wheat-beer-isolated-white-background-clipping-path-203685583.jpg"
         }
     },
     {
         "model": "app_api.styles",
         "pk": 11,
         "fields": {
-            "label": "Saison"
+            "label": "Saison",
+            "image": "https://thumbs.dreamstime.com/b/red-beer-saison-white-background-42106445.jpg"
         }
     },
     {
         "model": "app_api.styles",
         "pk": 12,
         "fields": {
-            "label": "Irish Stout"
+            "label": "Irish Stout",
+            "image": "https://img.favpng.com/10/6/9/beer-schwarzbier-stout-liqueur-coffee-png-favpng-iemrD18anrBXnkqvdB1WcBEgk_t.jpg"
         }
     },
     {
@@ -97,7 +100,7 @@
         "pk": 13,
         "fields": {
             "label": "Pilsner",
-            "image": "https://static.scientificamerican.com/sciam/cache/file/6BCFBDA8-397F-4A3A-828155D2F8B85FEF_source.jpg?w=590&h=800&47528C5C-6DA3-42C8-A9830BC284FEAC9F"
+            "image": "https://t4.ftcdn.net/jpg/02/45/13/29/360_F_245132903_jg1WZnPJmLfVCPuhlcNnj6avGiy2JB4s.jpg"
         }
     },
     {
