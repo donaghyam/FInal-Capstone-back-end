@@ -3,9 +3,17 @@
 
 <p align="left">
 This application was created to assist home brewers in finding recipes based on the ingredients they have on-hand.
+</p>
+<p align="left">
 ‣ The user may view all recipes, or filter recipes that they are able
+</p>
+<p align="left">
 ‣ to make based on their inventory
+</p>
+<p align="left">
 ‣ Inventory can be created, edited, and deleted by the creator
+</p>
+<p align="left">
 ‣ Application was created with React and Django
 </p>
 
