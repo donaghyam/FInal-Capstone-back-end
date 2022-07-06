@@ -32,6 +32,7 @@ This application was created to assist home brewers in finding recipes based on 
   <li>Open a different terminal window or tab and navigate to the project directory</li>
   <li>In the project directory run <code>pipenv shell</code>, then <code>code .</code></li>
   <li>In your terminal, run <code>python manage.py runserver</code></li>
+  <li>To login with some existing data entered in user inventory, the username is 'Adam' and the password is 'me'.</li>
 </ul>
 
 <br></br>
